@@ -1,0 +1,25 @@
+ACADEMIA TEAM JOSY FALCÃO - SITE
+
+Arquivos: index.html (página), hark.css, hark-hero.css, hark.js (estilos/scripts base) e as imagens .webp.
+
+TROCAR O WHATSAPP
+Abra index.html e procure por WHATSAPP_NUMBER e WHATSAPP_DEFAULT_MSG (no início do script).
+- WHATSAPP_NUMBER: 55 + DDD + número, só dígitos (ex.: 5565999013023).
+- WHATSAPP_DEFAULT_MSG: texto normal; o script codifica sozinho.
+Os links fixos no HTML (href="https://wa.me/5565999013023?...") servem de reserva sem JavaScript:
+use "Localizar e substituir" para trocar 5565999013023 pelo novo número em todo o arquivo.
+
+PUBLICAR (grátis)
+Netlify: app.netlify.com/drop -> arraste a pasta inteira. Pronto.
+Vercel: vercel.com -> Add New -> Project -> envie a pasta (ou via GitHub).
+GITHUB PAGES (passo a passo)
+1. Crie um repositório público no GitHub (ex.: academia-team-josy-falcao).
+2. Envie TODOS os arquivos desta pasta para a raiz do repositório (Add file -> Upload files),
+   incluindo o arquivo oculto .nojekyll. O index.html precisa ficar na raiz, não dentro de subpasta.
+3. Settings -> Pages -> Source: "Deploy from a branch" -> Branch: main / (root) -> Save.
+4. Em 1-2 minutos o site fica em https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/
+5. (Opcional) Para a prévia ao compartilhar no WhatsApp/redes, troque no index.html
+   content="musculacao-salao.webp" (og:image) e "image": "musculacao-salao.webp"
+   pelo endereço completo, ex.: https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/musculacao-salao.webp
+6. (Opcional) Domínio próprio: Settings -> Pages -> Custom domain.
+Todos os caminhos do site são relativos, então funciona tanto em usuario.github.io/repo quanto em domínio próprio.

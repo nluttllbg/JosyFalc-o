@@ -1,0 +1,880 @@
+<!doctype html>
+<!--
+  Academia Team Josy Falcão — site institucional (pt-BR)
+
+  WHATSAPP: para trocar o número ou a mensagem padrão, edite as duas constantes
+  no início do <script> no fim deste arquivo:
+    const WHATSAPP_NUMBER = "5565999013023";
+    const WHATSAPP_DEFAULT_MSG = "Olá! Vi o site de vocês ...";
+  Os links também têm href fixos no HTML (funcionam sem JavaScript); se mudar o
+  número, atualize também esses href (procure por "wa.me/5565999013023").
+
+  PENDÊNCIAS (informações ainda não confirmadas, não exibidas no site):
+    - Foto da fachada (há um bloco "Fachada — foto em breve" na galeria)
+    - CNPJ
+    - E-mail de contato
+    - História / ano de fundação / missão
+    - Preços e planos próprios (hoje só consta a parceria TotalPass, a partir do TP 1)
+-->
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Academia Team Josy Falcão | Musculação, Funcional e Ritmos em Cuiabá - MT</title>
+    <meta name="description" content="Academia no Novo Horizonte, Cuiabá: musculação, funcional e ritmos. Ambiente climatizado, nota 4,9 no Google. Seg a sex 5h às 22h. Fale pelo WhatsApp (65) 99901-3023." />
+    <meta name="theme-color" content="#0E0E0E" />
+    <meta property="og:title" content="Academia Team Josy Falcão | Musculação, Funcional e Ritmos em Cuiabá - MT" />
+    <meta property="og:description" content="Academia no Novo Horizonte, Cuiabá: musculação, funcional e ritmos. Ambiente climatizado, nota 4,9 no Google. Seg a sex 5h às 22h. Fale pelo WhatsApp (65) 99901-3023." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image" content="musculacao-salao.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800&display=swap" />
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ExerciseGym",
+        "name": "Academia Team Josy Falcão",
+        "description": "Academia de musculação, funcional e ritmos no bairro Novo Horizonte, em Cuiabá - MT. Ambiente climatizado.",
+        "image": "musculacao-salao.webp",
+        "telephone": "+55-65-99901-3023",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Gov. Dante Martins de Oliveira, 1193",
+          "addressLocality": "Cuiabá",
+          "addressRegion": "MT",
+          "postalCode": "78058-688",
+          "addressCountry": "BR"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": -15.5728061, "longitude": -56.0318405 },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "05:00", "closes": "22:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "11:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "16:00", "closes": "19:00" }
+        ],
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "62", "bestRating": "5" },
+        "sameAs": ["https://www.instagram.com/academiateamjosyfalcao/"]
+      }
+    </script>
+    <style>
+      :root {
+        --x-black: #0e0e0e;
+        --x-black-2: #1a1a1a;
+        --x-pink: #e6197a;
+        --x-pink-deep: #c8126a;
+        --x-pink-text: #f2358d;
+        --x-red: #b3121b;
+        --x-white: #ffffff;
+        --x-off: #f4f1ee;
+        --x-wa: #25d366;
+        --x-head: "Anton", Impact, "Arial Narrow", sans-serif;
+        --x-body: "Archivo", system-ui, sans-serif;
+        --x-pad: clamp(20px, 5vw, 64px);
+        --x-max: 1320px;
+      }
+      html { scroll-padding-top: 84px; }
+      body {
+        background: var(--x-black);
+        color: var(--x-white);
+        font-family: var(--x-body);
+        font-size: 17px;
+        line-height: 1.55;
+        margin: 0;
+      }
+      :focus-visible { outline: 3px solid var(--x-pink-text) !important; outline-offset: 3px; border-radius: 4px; }
+      #conteudo { overflow-x: clip; display: block; }
+      .x-skip {
+        position: absolute; left: 12px; top: -80px; z-index: 200;
+        background: var(--x-pink-deep); color: #fff; padding: 12px 18px; font-weight: 800; text-decoration: none;
+      }
+      .x-skip:focus { top: 12px; }
+      .x-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+      .x-wrap { max-width: var(--x-max); margin: 0 auto; padding: 0 var(--x-pad); }
+      .x-skew { display: inline-block; transform: skewX(-6deg); }
+      .x-pink { color: var(--x-pink-text); }
+      .x-light .x-pink { color: var(--x-pink-deep); }
+
+      /* ---------- headings ---------- */
+      .x-h2 {
+        font-family: var(--x-head); font-weight: 400; text-transform: uppercase;
+        font-size: clamp(2.6rem, 7vw, 6rem); line-height: .92; letter-spacing: .01em; margin: 0 0 24px;
+      }
+      .x-kicker {
+        font-weight: 800; text-transform: uppercase; letter-spacing: .16em; font-size: 13px;
+        display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+      }
+      .x-kicker::before { content: ""; width: 36px; height: 3px; background: var(--x-red); }
+      .x-num {
+        font-family: var(--x-head); font-size: clamp(4.5rem, 11vw, 9.5rem); line-height: .8;
+        color: #e5484f; -webkit-text-stroke: 2px #e5484f; display: block; user-select: none;
+      }
+      .x-light .x-num { color: var(--x-red); -webkit-text-stroke-color: var(--x-red); }
+      .x-info dd a { display: inline-flex; align-items: center; min-height: 44px; }
+      .x-foot address a { display: inline-flex; align-items: center; min-height: 44px; }
+      .x-foot li a { min-height: 44px; min-width: 44px; display: inline-flex !important; align-items: center; }
+
+      /* ---------- buttons ---------- */
+      .x-btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+        min-height: 48px; padding: 12px 22px; border-radius: 2px; border: 2px solid currentColor;
+        font: 800 15px/1.1 var(--x-body); text-transform: uppercase; letter-spacing: .06em;
+        text-decoration: none; color: inherit; background: transparent; cursor: pointer;
+        transition: transform .2s ease, background-color .2s ease, color .2s ease, box-shadow .2s ease;
+      }
+      .x-btn:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--x-pink); }
+      .x-btn svg { width: 20px; height: 20px; flex: none; }
+      .x-btn--wa { background: var(--x-wa); border-color: var(--x-wa); color: var(--x-black); }
+      .x-btn--wa:hover { box-shadow: 4px 4px 0 var(--x-white); }
+      .x-light .x-btn--wa:hover { box-shadow: 4px 4px 0 var(--x-black); }
+      .x-btn--big { min-height: 60px; padding: 16px 28px; font-size: 17px; }
+      .x-btn--pink { background: var(--x-pink-deep); border-color: var(--x-pink-deep); color: #fff; }
+
+      /* ---------- header ---------- */
+      .x-header {
+        position: sticky; top: 0; z-index: 100; background: rgba(14, 14, 14, .94);
+        backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid #2a2a2a;
+      }
+      .x-header__in { display: flex; align-items: center; gap: 24px; height: 72px; }
+      .x-logo { display: block; width: 96px; height: 52px; overflow: hidden; flex: none; }
+      .x-logo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+      .x-menu { margin-left: auto; }
+      .x-menu ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 4px; }
+      .x-menu a {
+        display: block; padding: 12px 12px; text-decoration: none; font-weight: 600; font-size: 15px;
+        text-transform: uppercase; letter-spacing: .05em; position: relative;
+      }
+      .x-menu a::after {
+        content: ""; position: absolute; left: 12px; right: 12px; bottom: 6px; height: 3px;
+        background: var(--x-pink); transform: scaleX(0); transform-origin: left; transition: transform .25s ease;
+      }
+      .x-menu a:hover::after { transform: scaleX(1); }
+      .x-header .x-btn { min-height: 44px; padding: 10px 16px; font-size: 13px; }
+      .x-burger {
+        display: none; width: 48px; height: 48px; background: none; border: 2px solid #fff; color: #fff;
+        cursor: pointer; border-radius: 2px; padding: 0; align-items: center; justify-content: center;
+      }
+      .x-burger span, .x-burger span::before, .x-burger span::after {
+        display: block; width: 22px; height: 2px; background: currentColor; position: relative; transition: transform .25s ease;
+      }
+      .x-burger span::before, .x-burger span::after { content: ""; position: absolute; left: 0; }
+      .x-burger span::before { top: -7px; }
+      .x-burger span::after { top: 7px; }
+      .x-burger[aria-expanded="true"] span { background: transparent; }
+      .x-burger[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+      .x-burger[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+      @media (max-width: 960px) {
+        .x-burger { display: inline-flex; }
+        .x-header .x-btn { margin-left: auto; }
+        .x-menu {
+          position: absolute; top: 72px; left: 0; right: 0; background: var(--x-black);
+          border-bottom: 4px solid var(--x-pink); display: none; margin: 0;
+        }
+        .x-menu.is-open { display: block; }
+        .x-menu ul { flex-direction: column; padding: 12px var(--x-pad) 24px; }
+        .x-menu a { font-family: var(--x-head); font-weight: 400; font-size: 30px; padding: 10px 0; }
+        .x-menu a::after { left: 0; right: auto; width: 60px; }
+      }
+      @media (max-width: 560px) {
+        .x-header .x-btn__txt { display: none; }
+        .x-header .x-btn { width: 48px; padding: 0; }
+      }
+
+      /* ---------- hero ---------- */
+      .x-hero { position: relative; padding: clamp(24px, 4vw, 56px) 0 clamp(56px, 8vw, 110px); overflow: hidden; }
+      .x-hero__grid { display: grid; grid-template-columns: repeat(12, 1fr); align-items: end; }
+      .x-hero__photo { grid-column: 5 / 13; grid-row: 1; position: relative; margin: 0; isolation: isolate; }
+      .x-info { position: relative; isolation: isolate; }
+      .x-hero__photo img { width: 100%; height: clamp(420px, 62vw, 720px); object-fit: cover; }
+      .x-hero__photo::before {
+        content: ""; position: absolute; right: -18px; top: -18px; width: 40%; height: 45%;
+        background: var(--x-pink); z-index: -1;
+      }
+      .x-hero__panel {
+        grid-column: 1 / 9; grid-row: 1; position: relative; z-index: 2; background: var(--x-black);
+        padding: clamp(28px, 4vw, 56px) clamp(24px, 4vw, 56px) clamp(28px, 4vw, 48px) 0;
+        margin-bottom: clamp(-40px, -4vw, -20px);
+      }
+      .x-hero__panel .x-num { margin-bottom: 8px; }
+      .x-hero h1 {
+        font-family: var(--x-head); font-weight: 400; text-transform: uppercase;
+        font-size: clamp(3.4rem, 9.5vw, 8rem); line-height: .88; margin: 0 0 24px; letter-spacing: .005em;
+      }
+      .x-hero h1 .x-skew { color: var(--x-pink); }
+      .x-hero__sub { font-size: clamp(17px, 1.6vw, 20px); max-width: 34em; margin: 0 0 28px; color: #e8e4e0; }
+      .x-badges { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 10px 22px; }
+      .x-badges li { font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: .06em; display: flex; align-items: center; gap: 8px; }
+      .x-badges li::before { content: ""; width: 8px; height: 8px; background: var(--x-pink); transform: rotate(45deg); }
+      @media (max-width: 860px) {
+        .x-hero__grid { display: block; }
+        .x-hero__photo img { height: 300px; }
+        .x-hero__photo::before { right: -8px; top: -8px; }
+        .x-hero__panel { margin: -70px 16px 0 0; padding: 28px 24px 8px 0; }
+      }
+
+      /* ---------- marquee ---------- */
+      .x-marquee { background: var(--x-pink); color: var(--x-black); overflow: hidden; border-block: 4px solid var(--x-black); transform: rotate(-1.2deg); margin: 0 -10px; position: relative; z-index: 3; }
+      .x-marquee__track { display: flex; width: max-content; animation: x-scroll 28s linear infinite; }
+      .x-marquee__track span {
+        font-family: var(--x-head); font-size: clamp(1.8rem, 4vw, 3.2rem); text-transform: uppercase;
+        white-space: nowrap; padding: 12px 0; letter-spacing: .02em;
+      }
+      @keyframes x-scroll { to { transform: translateX(-50%); } }
+
+      /* ---------- light sections ---------- */
+      .x-light { background: var(--x-off); color: var(--x-black); }
+      .x-sec { padding: clamp(72px, 10vw, 140px) 0; position: relative; }
+
+      /* sobre */
+      .x-about { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(40px, 6vw, 96px); align-items: start; }
+      .x-stack { position: relative; padding: 0 0 22% 0; }
+      .x-stack__a { width: 82%; position: relative; z-index: 2; border: 10px solid var(--x-pink); }
+      .x-stack__b { position: absolute; right: 0; bottom: 0; width: 66%; z-index: 1; filter: grayscale(.2); }
+      .x-stack img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+      .x-stack__tag {
+        position: absolute; left: 0; bottom: 6%; z-index: 3; background: var(--x-black); color: #fff;
+        font-family: var(--x-head); text-transform: uppercase; font-size: clamp(1.1rem, 2vw, 1.5rem);
+        padding: 10px 16px; transform: skewX(-6deg);
+      }
+      .x-lead { font-size: clamp(19px, 1.8vw, 23px); line-height: 1.45; font-weight: 600; margin: 0 0 32px; }
+      .x-diff { list-style: none; padding: 0; margin: 0; counter-reset: d; border-top: 3px solid var(--x-black); }
+      .x-diff li {
+        counter-increment: d; display: grid; grid-template-columns: 52px 1fr; gap: 12px; padding: 16px 0;
+        border-bottom: 1px solid #cfc9c3; font-weight: 800; font-size: clamp(17px, 1.6vw, 20px); text-transform: uppercase; line-height: 1.2;
+      }
+      .x-diff li::before { content: counter(d, decimal-leading-zero); font-family: var(--x-head); font-weight: 400; color: var(--x-red); font-size: 22px; }
+      .x-diff small { display: block; font-weight: 400; text-transform: none; font-size: 15px; color: #444; margin-top: 4px; }
+      .x-diff li:nth-child(odd) { padding-left: 0; }
+      .x-diff li:nth-child(even) { margin-left: clamp(0px, 3vw, 36px); }
+      @media (max-width: 860px) { .x-about { grid-template-columns: 1fr; } }
+
+      /* modalidades */
+      .x-mods { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(28px, 4vw, 56px); align-items: stretch; }
+      .x-mods__img { margin: 0; position: relative; min-height: 520px; }
+      .x-mods__img img { width: 100%; height: 100%; object-fit: cover; object-position: 60% center; position: absolute; inset: 0; }
+      .x-mods__img::after { content: ""; position: absolute; left: -14px; bottom: -14px; width: 55%; height: 12px; background: var(--x-red); }
+      .x-mods__list { display: grid; grid-template-columns: 1.3fr 1fr; gap: 18px; }
+      .x-mod { position: relative; padding: clamp(24px, 3vw, 36px); display: flex; flex-direction: column; gap: 14px; }
+      .x-mod h3 { font-family: var(--x-head); font-weight: 400; text-transform: uppercase; font-size: clamp(2.2rem, 4vw, 3.4rem); line-height: .95; }
+      .x-mod p { margin: 0; }
+      .x-mod .x-btn { align-self: flex-start; margin-top: auto; }
+      .x-mod__icon { width: 52px; height: 52px; }
+      .x-mod--a { grid-column: 1 / 3; background: var(--x-pink-deep); color: #fff; }
+      .x-mod--a h3 { font-size: clamp(2.8rem, 6vw, 5rem); }
+      .x-mod--a p { font-size: 19px; max-width: 30em; }
+      .x-mod--b { background: var(--x-white); color: var(--x-black); transform: translateY(18px); }
+      .x-mod--c { border: 3px solid var(--x-white); }
+      .x-mod--c h3 .x-skew, .x-mod--b h3 .x-skew { color: inherit; }
+      .x-mod--b .x-btn--wa:hover { box-shadow: 4px 4px 0 var(--x-black); }
+      @media (max-width: 960px) {
+        .x-mods { grid-template-columns: 1fr; }
+        .x-mods__img { min-height: 340px; }
+      }
+      @media (max-width: 620px) {
+        .x-mods__list { grid-template-columns: 1fr; }
+        .x-mod--b { transform: none; }
+      }
+
+      /* galeria */
+      .x-gal { display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: clamp(110px, 13vw, 170px); gap: 14px; }
+      .x-tile { position: relative; overflow: hidden; margin: 0; background: var(--x-black); }
+      .x-tile button { all: unset; display: block; width: 100%; height: 100%; cursor: zoom-in; position: relative; }
+      .x-tile button:focus-visible { outline: 3px solid var(--x-pink-deep); outline-offset: 3px; }
+      .x-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+      .x-tile button::after {
+        content: ""; position: absolute; inset: 0;
+        background: linear-gradient(135deg, rgba(230, 25, 122, .92) 0 42%, rgba(230, 25, 122, 0) 42.2%);
+        transform: translateX(-102%); transition: transform .45s cubic-bezier(.2, .8, .2, 1);
+      }
+      .x-tile figcaption {
+        position: absolute; left: 16px; top: 14px; z-index: 2; color: #fff; font-family: var(--x-head);
+        text-transform: uppercase; font-size: clamp(1.2rem, 2vw, 1.8rem); line-height: 1; max-width: 50%;
+        opacity: 0; transform: translateY(-8px); transition: opacity .3s ease .1s, transform .3s ease .1s; pointer-events: none;
+      }
+      .x-tile:hover button::after, .x-tile button:focus-visible::after { transform: none; }
+      .x-tile:hover img { transform: scale(1.05); }
+      .x-tile:hover figcaption, .x-tile:focus-within figcaption { opacity: 1; transform: none; }
+      .x-g1 { grid-column: 1 / 5; grid-row: 1 / 4; }
+      .x-g2 { grid-column: 5 / 7; grid-row: 1 / 4; }
+      .x-g3 { grid-column: 1 / 4; grid-row: 4 / 6; }
+      .x-gph { grid-column: 1 / 4; grid-row: 6 / 7; }
+      .x-g4 { grid-column: 4 / 7; grid-row: 4 / 7; }
+      .x-ph {
+        background: var(--x-black); border: 3px dashed var(--x-pink); display: flex; align-items: center; justify-content: center;
+        color: #fff; font-family: var(--x-head); text-transform: uppercase; font-size: clamp(1.2rem, 2.2vw, 1.8rem); text-align: center; padding: 12px;
+      }
+      .x-ph span { color: var(--x-pink-text); }
+      @media (max-width: 760px) {
+        .x-gal { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; }
+        .x-g1 { grid-column: 1 / 3; grid-row: auto / span 2; }
+        .x-g2, .x-g3 { grid-column: auto; grid-row: auto; }
+        .x-g4 { grid-column: 1 / 3; grid-row: auto / span 2; }
+        .x-gph { grid-column: 1 / 3; grid-row: auto; }
+        .x-tile figcaption { opacity: 1; transform: none; font-size: 1rem; left: 10px; top: auto; bottom: 10px; max-width: 90%; text-shadow: 0 1px 6px rgba(0,0,0,.7); }
+      }
+
+      /* lightbox */
+      .x-lb {
+        position: fixed; inset: 0; z-index: 300; background: rgba(8, 8, 8, .95); display: flex; align-items: center; justify-content: center;
+        opacity: 0; visibility: hidden; transition: opacity .3s ease, visibility 0s linear .3s; padding: 64px 16px;
+      }
+      .x-lb.is-open { opacity: 1; visibility: visible; transition: opacity .3s ease; }
+      .x-lb figure { margin: 0; max-width: 1100px; width: 100%; text-align: center; }
+      .x-lb img { max-width: 100%; max-height: 76vh; margin: 0 auto; object-fit: contain; border-bottom: 6px solid var(--x-pink); }
+      .x-lb figcaption { margin-top: 14px; font-family: var(--x-head); text-transform: uppercase; font-size: 1.6rem; }
+      .x-lb button {
+        position: absolute; width: 52px; height: 52px; background: var(--x-black); color: #fff; border: 2px solid #fff;
+        font: 400 26px/1 var(--x-body); cursor: pointer; display: flex; align-items: center; justify-content: center; border-radius: 2px;
+      }
+      .x-lb button:hover { background: var(--x-pink-deep); border-color: var(--x-pink-deep); }
+      .x-lb__close { top: 16px; right: 16px; }
+      .x-lb__prev { left: 16px; top: 50%; transform: translateY(-50%); }
+      .x-lb__next { right: 16px; top: 50%; transform: translateY(-50%); }
+      @media (max-width: 620px) { .x-lb__prev, .x-lb__next { top: auto; bottom: 16px; transform: none; } }
+
+      /* avaliações */
+      .x-rev-top { display: grid; grid-template-columns: auto 1fr; gap: clamp(24px, 5vw, 80px); align-items: end; margin-bottom: clamp(48px, 7vw, 96px); }
+      .x-score { font-family: var(--x-head); font-size: clamp(7rem, 20vw, 15rem); line-height: .8; color: var(--x-pink); }
+      .x-stars { color: var(--x-pink-text); letter-spacing: .12em; font-size: 26px; }
+      .x-score-label { font-weight: 800; text-transform: uppercase; letter-spacing: .08em; font-size: 18px; margin-top: 6px; }
+      .x-pull { margin: 0 0 clamp(48px, 6vw, 80px); position: relative; padding-left: clamp(0px, 6vw, 90px); }
+      .x-pull::before {
+        content: "\201C"; position: absolute; left: 0; top: -.15em; font-family: var(--x-head); font-size: clamp(6rem, 14vw, 12rem);
+        line-height: 1; color: var(--x-red);
+      }
+      .x-pull blockquote { margin: 0; }
+      .x-pull p {
+        font-family: var(--x-head); text-transform: uppercase; font-size: clamp(2.2rem, 5.6vw, 5rem); line-height: 1; margin: 0;
+      }
+      .x-meta { margin-top: 18px; font-size: 15px; display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; color: #d6d2ce; }
+      .x-meta .x-stars { font-size: 16px; }
+      .x-meta strong { color: #fff; }
+      .x-revs { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 4vw, 56px); }
+      .x-rev { margin: 0; padding: clamp(24px, 3vw, 36px); border-left: 6px solid var(--x-pink); background: var(--x-black-2); }
+      .x-rev:nth-child(2) { margin-top: clamp(0px, 6vw, 80px); border-left-color: var(--x-red); }
+      .x-rev blockquote { margin: 0; }
+      .x-rev p { font-size: clamp(18px, 1.7vw, 22px); font-weight: 600; line-height: 1.4; margin: 0; }
+      @media (max-width: 760px) { .x-revs, .x-rev-top { grid-template-columns: 1fr; } }
+
+      /* contato */
+      .x-contact { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 72px); }
+      .x-info dl { margin: 0 0 28px; }
+      .x-info dt { font-weight: 800; text-transform: uppercase; letter-spacing: .12em; font-size: 13px; color: var(--x-red); margin-top: 22px; }
+      .x-info dd { margin: 6px 0 0; font-size: 18px; }
+      .x-info a:not(.x-btn) { color: var(--x-black); text-decoration-color: var(--x-pink-deep); text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+      .x-hours { width: 100%; border-collapse: collapse; margin-top: 6px; font: 400 17px/1.4 var(--x-body); }
+      .x-hours th, .x-hours td { text-align: left; padding: 10px 10px; border-bottom: 1px solid #cfc9c3; }
+      .x-hours th { font-weight: 600; }
+      .x-hours tr.is-today { background: var(--x-black); color: #fff; }
+      .x-hours tr.is-today th::after {
+        content: "Hoje"; margin-left: 10px; background: var(--x-pink-deep); color: #fff; font-size: 12px; font-weight: 800;
+        text-transform: uppercase; letter-spacing: .08em; padding: 3px 8px;
+      }
+      .x-map { margin: 0; position: relative; border: 3px solid var(--x-black); }
+      .x-map iframe { display: block; width: 100%; height: 340px; border: 0; }
+      .x-form { background: var(--x-black); color: #fff; padding: clamp(24px, 4vw, 44px); margin-top: 32px; position: relative; }
+      .x-form::before { content: ""; position: absolute; right: -12px; top: -12px; width: 90px; height: 90px; background: var(--x-pink); z-index: -1; }
+      .x-form h3 { font-family: var(--x-head); font-weight: 400; text-transform: uppercase; font-size: clamp(2rem, 3.6vw, 2.8rem); line-height: 1; margin-bottom: 8px; }
+      .x-form p { color: #d6d2ce; margin-bottom: 18px; font-size: 15px; }
+      .x-field { margin-bottom: 16px; }
+      .x-field label { display: block; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; }
+      .x-field input, .x-field textarea {
+        width: 100%; background: var(--x-black-2); color: #fff; border: 2px solid #555; border-radius: 2px;
+        font: 400 17px/1.4 var(--x-body); padding: 12px 14px; min-height: 48px;
+      }
+      .x-field textarea { min-height: 120px; resize: vertical; }
+      .x-field input:focus, .x-field textarea:focus { border-color: var(--x-pink-text); outline: none; }
+      .x-field [aria-invalid="true"] { border-color: #ff6b8a; }
+      .x-err { color: #ff8fb4; font-size: 14px; margin-top: 6px; min-height: 0; }
+      .x-err:empty { display: none; }
+      @media (max-width: 900px) { .x-contact { grid-template-columns: 1fr; } }
+
+      /* footer */
+      .x-foot { background: var(--x-black); border-top: 6px solid var(--x-pink); padding: clamp(48px, 7vw, 80px) 0 32px; }
+      .x-foot__grid { display: grid; grid-template-columns: 1.2fr 1fr 1.3fr 1fr; gap: 32px; }
+      .x-foot__logo { width: 180px; height: 100px; overflow: hidden; }
+      .x-foot__logo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+      .x-foot h2 { font-family: var(--x-head); font-weight: 400; text-transform: uppercase; font-size: 1.4rem; margin-bottom: 12px; color: var(--x-pink-text); }
+      .x-foot ul { list-style: none; padding: 0; margin: 0; }
+      .x-foot li a { display: inline-block; padding: 6px 0; text-decoration: none; }
+      .x-foot li a:hover { color: var(--x-pink-text); }
+      .x-foot address { font-style: normal; color: #d6d2ce; }
+      .x-foot address a { color: #fff; }
+      .x-ig { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; text-decoration: none; font-weight: 600; margin-top: 8px; }
+      .x-ig svg { width: 26px; height: 26px; }
+      .x-ig:hover { color: var(--x-pink-text); }
+      .x-foot__bar { margin-top: 48px; padding-top: 22px; border-top: 1px solid #2a2a2a; color: #bdb8b3; font-size: 14px; }
+      @media (max-width: 860px) { .x-foot__grid { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 520px) { .x-foot__grid { grid-template-columns: 1fr; } }
+
+      /* floating whatsapp */
+      .x-fab {
+        position: fixed; right: 18px; bottom: 18px; z-index: 150; width: 62px; height: 62px; border-radius: 50%;
+        background: var(--x-wa); color: #fff; display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .4); transition: transform .2s ease;
+      }
+      .x-fab:hover { transform: scale(1.07); }
+      .x-fab svg { width: 34px; height: 34px; position: relative; z-index: 1; }
+      .x-fab::before {
+        content: ""; position: absolute; inset: 0; border-radius: 50%; border: 3px solid var(--x-wa);
+        animation: x-pulse 2.2s ease-out infinite;
+      }
+      @keyframes x-pulse { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(1.6); opacity: 0; } }
+
+      /* reveal */
+      .x-js .x-reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.2, .8, .2, 1); }
+      .x-js .x-reveal.is-in { opacity: 1; transform: none; }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .x-marquee__track { animation: none; width: auto; flex-wrap: wrap; }
+        .x-marquee__track span[aria-hidden] { display: none; }
+        .x-marquee__track span { white-space: normal; padding-inline: 16px; }
+        .x-fab::before { animation: none; display: none; }
+        .x-js .x-reveal { opacity: 1; transform: none; transition: none; }
+        .x-tile img, .x-tile button::after, .x-tile figcaption, .x-lb, .x-btn, .x-menu a::after { transition: none !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <symbol id="x-wa-glyph" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></symbol>
+    </svg>
+    <a class="x-skip" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="x-header">
+      <div class="x-wrap x-header__in">
+        <a class="x-logo" href="#inicio" aria-label="Academia Team Josy Falcão, voltar ao início">
+          <img src="logo-team-josy-falcao.webp" alt="Logo Team Josy Falcão – Academia • Funcional" width="1254" height="720" />
+        </a>
+        <nav class="x-menu" id="x-menu" aria-label="Menu principal">
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#modalidades">Modalidades</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+        <a class="x-btn x-btn--wa" data-wa href="https://wa.me/5565999013023?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os/produtos.%20Podem%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer" aria-label="Agendar pelo WhatsApp (abre em nova aba)"><svg aria-hidden="true"><use href="#x-wa-glyph" /></svg><span class="x-btn__txt">Agendar pelo WhatsApp</span></a>
+        <button class="x-burger" type="button" aria-expanded="false" aria-controls="x-menu" aria-label="Abrir menu"><span></span></button>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <!-- 01 HERO -->
+      <section class="x-hero" id="inicio" aria-labelledby="x-h1">
+        <div class="x-wrap x-hero__grid">
+          <figure class="x-hero__photo">
+            <img src="musculacao-salao.webp" alt="Salão de musculação da academia, com paredes vermelhas e pretas, suporte de halteres e barril vermelho" width="1280" height="720" fetchpriority="high" />
+          </figure>
+          <div class="x-hero__panel">
+            <span class="x-num" aria-hidden="true">01</span>
+            <h1 id="x-h1">Disciplina <span class="x-skew">supera</span> motivação.</h1>
+            <p class="x-hero__sub">Musculação, funcional e ritmos no Novo Horizonte, em Cuiabá. Ambiente climatizado, muitos aparelhos e um atendimento que acolhe.</p>
+            <a class="x-btn x-btn--wa x-btn--big" data-wa href="https://wa.me/5565999013023?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os/produtos.%20Podem%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer" aria-label="Quero começar meu treino: falar no WhatsApp (abre em nova aba)"><svg aria-hidden="true"><use href="#x-wa-glyph" /></svg>Quero começar meu treino</a>
+            <ul class="x-badges">
+              <li><span><span aria-hidden="true">★</span> 4,9 no Google · 62 avaliações</span></li>
+              <li>Seg a sex · 5h às 22h</li>
+              <li>Aceita TotalPass</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="x-marquee" role="presentation">
+        <div class="x-marquee__track">
+          <span>Musculação • Funcional • Ritmos • Disciplina supera motivação •&nbsp;</span>
+          <span aria-hidden="true">Musculação • Funcional • Ritmos • Disciplina supera motivação •&nbsp;</span>
+          <span aria-hidden="true">Musculação • Funcional • Ritmos • Disciplina supera motivação •&nbsp;</span>
+          <span aria-hidden="true">Musculação • Funcional • Ritmos • Disciplina supera motivação •&nbsp;</span>
+        </div>
+      </div>
+
+      <!-- 02 SOBRE -->
+      <section class="x-sec x-light" id="sobre" aria-labelledby="x-sobre-t">
+        <div class="x-wrap x-about">
+          <div class="x-stack x-reveal">
+            <img class="x-stack__a" src="cardio-esteiras.webp" alt="Área de cardio com esteiras, a frase 'Disciplina supera Motivação' pintada na parede e a fachada de vidro" width="1280" height="720" loading="lazy" />
+            <img class="x-stack__b" src="aparelhos-area.webp" alt="Área de aparelhos com pessoas treinando" width="1280" height="720" loading="lazy" />
+            <p class="x-stack__tag" aria-hidden="true">Novo Horizonte · Cuiabá</p>
+          </div>
+          <div class="x-reveal">
+            <span class="x-num" aria-hidden="true">02</span>
+            <p class="x-kicker">Sobre nós</p>
+            <h2 class="x-h2" id="x-sobre-t">Academia de <span class="x-skew x-pink">bairro</span>, treino de verdade.</h2>
+            <p class="x-lead">A Team Josy Falcão é uma academia de bairro no Novo Horizonte, em Cuiabá, que une musculação, treino funcional e aulas de ritmos em um só lugar.</p>
+            <ul class="x-diff" aria-label="Diferenciais">
+              <li><span>Ambiente climatizado<small>Ar-condicionado e climatizador.</small></span></li>
+              <li><span>Grande variedade de aparelhos</span></li>
+              <li><span>Atendimento próximo<small>Professores atenciosos.</small></span></li>
+              <li><span>Abre às 5h da manhã<small>De segunda a sexta.</small></span></li>
+              <li><span>Estrutura completa<small>Vestiário, armários, bebedouro, banheiro acessível e Wi-Fi.</small></span></li>
+              <li><span>Parceira TotalPass<small>Planos a partir do TP 1.</small></span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 MODALIDADES -->
+      <section class="x-sec" id="modalidades" aria-labelledby="x-mod-t">
+        <div class="x-wrap">
+          <div class="x-reveal" style="margin-bottom: clamp(32px, 5vw, 64px)">
+            <span class="x-num" aria-hidden="true">03</span>
+            <p class="x-kicker">Modalidades</p>
+            <h2 class="x-h2" id="x-mod-t">Três jeitos de <span class="x-skew x-pink">suar</span>.</h2>
+          </div>
+          <div class="x-mods">
+            <figure class="x-mods__img x-reveal">
+              <img src="aluna-treinando.webp" alt="Aluna treinando em um aparelho, com banco vermelho ao lado" width="1280" height="720" loading="lazy" />
+            </figure>
+            <div class="x-mods__list">
+              <article class="x-mod x-mod--a x-reveal">
+                <svg class="x-mod__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><rect x="5" y="15" width="6" height="18" rx="1.5"/><rect x="11" y="11" width="6" height="26" rx="1.5"/><rect x="31" y="11" width="6" height="26" rx="1.5"/><rect x="37" y="15" width="6" height="18" rx="1.5"/><path d="M17 24h14M2 24h3M43 24h3"/></svg>
+                <h3>Muscula<span class="x-skew">ção</span></h3>
+                <p>Salão amplo com pesos livres, máquinas e área de cardio com esteiras e bikes.</p>
+                <a class="x-btn x-btn--wa" data-wa data-wa-msg="Olá! Gostaria de saber mais sobre Musculação." href="https://wa.me/5565999013023?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20Muscula%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" aria-label="Quero saber mais sobre Musculação pelo WhatsApp (abre em nova aba)"><svg aria-hidden="true"><use href="#x-wa-glyph" /></svg>Quero saber mais</a>
+              </article>
+              <article class="x-mod x-mod--b x-reveal">
+                <svg class="x-mod__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M17 17a7 7 0 1 1 14 0"/><path d="M14 19h20l3 6a13 13 0 1 1-26 0z"/><path d="M19 30h10" stroke-linecap="round"/></svg>
+                <h3><span class="x-skew">Funcional</span></h3>
+                <p>Treinos intensos em grupo para queimar calorias, ganhar resistência e condicionamento.</p>
+                <a class="x-btn x-btn--wa" data-wa data-wa-msg="Olá! Gostaria de saber mais sobre o Funcional." href="https://wa.me/5565999013023?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20Funcional." target="_blank" rel="noopener noreferrer" aria-label="Quero saber mais sobre o Funcional pelo WhatsApp (abre em nova aba)"><svg aria-hidden="true"><use href="#x-wa-glyph" /></svg>Quero saber mais</a>
+              </article>
+              <article class="x-mod x-mod--c x-reveal">
+                <svg class="x-mod__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 36V10l22-5v26"/><ellipse cx="12.5" cy="36" rx="5.5" ry="4.5"/><ellipse cx="34.5" cy="31" rx="5.5" ry="4.5"/><path d="M18 17l22-5"/></svg>
+                <h3><span class="x-skew">Ritmos</span></h3>
+                <p>Aulas de dança para treinar com energia, música e muita animação.</p>
+                <a class="x-btn x-btn--wa" data-wa data-wa-msg="Olá! Gostaria de saber mais sobre as aulas de Ritmos." href="https://wa.me/5565999013023?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20as%20aulas%20de%20Ritmos." target="_blank" rel="noopener noreferrer" aria-label="Quero saber mais sobre as aulas de Ritmos pelo WhatsApp (abre em nova aba)"><svg aria-hidden="true"><use href="#x-wa-glyph" /></svg>Quero saber mais</a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 GALERIA -->
+      <section class="x-sec x-light" id="galeria" aria-labelledby="x-gal-t">
+        <div class="x-wrap">
+          <div class="x-reveal" style="margin-bottom: clamp(32px, 5vw, 56px)">
+            <span class="x-num" aria-hidden="true">04</span>
+            <p class="x-kicker">Galeria</p>
+            <h2 class="x-h2" id="x-gal-t">Por dentro do <span class="x-skew x-pink">treino</span>.</h2>
+          </div>
+          <div class="x-gal">
+            <figure class="x-tile x-g1 x-reveal"><button type="button" aria-label="Ampliar foto: Salão de musculação"><img src="musculacao-salao.webp" alt="Salão de musculação com paredes vermelhas e pretas e suporte de halteres" width="1280" height="720" loading="lazy" /></button><figcaption>Salão de musculação</figcaption></figure>
+            <figure class="x-tile x-g2 x-reveal"><button type="button" aria-label="Ampliar foto: Área de cardio"><img src="cardio-esteiras.webp" alt="Área de cardio com esteiras e a frase 'Disciplina supera Motivação' na parede" width="1280" height="720" loading="lazy" style="object-position: 30% center" /></button><figcaption>Área de cardio</figcaption></figure>
+            <figure class="x-tile x-g3 x-reveal"><button type="button" aria-label="Ampliar foto: Aparelhos e máquinas"><img src="aparelhos-area.webp" alt="Área de aparelhos e máquinas com pessoas treinando" width="1280" height="720" loading="lazy" /></button><figcaption>Aparelhos e máquinas</figcaption></figure>
+            <div class="x-tile x-gph x-ph x-reveal" role="img" aria-label="Fachada, foto em breve"><p>Fachada <span>— foto em breve</span></p></div>
+            <figure class="x-tile x-g4 x-reveal"><button type="button" aria-label="Ampliar foto: Treino no dia a dia"><img src="aluna-treinando.webp" alt="Aluna treinando em um aparelho da academia" width="1280" height="720" loading="lazy" /></button><figcaption>Treino no dia a dia</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 AVALIAÇÕES -->
+      <section class="x-sec" id="avaliacoes" aria-labelledby="x-rev-t">
+        <div class="x-wrap">
+          <div class="x-rev-top x-reveal">
+            <p class="x-score" aria-hidden="true"><span data-count="4.9" data-decimals="1">4,9</span></p>
+            <div>
+              <span class="x-num" aria-hidden="true">05</span>
+              <p class="x-kicker">Avaliações</p>
+              <h2 class="x-h2" id="x-rev-t" style="margin-bottom: 10px">Quem treina, <span class="x-skew x-pink">recomenda</span>.</h2>
+              <p class="x-stars" role="img" aria-label="Nota 4,9 de 5">★★★★★</p>
+              <p class="x-score-label"><span data-count="62" data-decimals="0">62</span> avaliações no Google</p>
+            </div>
+          </div>
+
+          <figure class="x-pull x-reveal">
+            <blockquote><p>Ótimo lugar, climatizado com quantidade de aparelhos consiravel. Bom atendimento</p></blockquote>
+            <figcaption class="x-meta"><span class="x-stars" role="img" aria-label="5 de 5 estrelas">★★★★★</span><strong>Avaliação no Google</strong><span>abril de 2026</span></figcaption>
+          </figure>
+
+          <div class="x-revs">
+            <figure class="x-rev x-reveal">
+              <blockquote><p>Um ótimo lugar pra se estar, atendimento diferenciado</p></blockquote>
+              <figcaption class="x-meta"><span class="x-stars" role="img" aria-label="5 de 5 estrelas">★★★★★</span><strong>Avaliação no Google</strong><span>agosto de 2026</span></figcaption>
+            </figure>
+            <figure class="x-rev x-reveal">
+              <blockquote><p>Academia ótima tem tudo que vc precisa pra "malhar"atendimento excelente profissionais excelente deixa vc bem acolhida @professora sabrina Maravilhosa.</p></blockquote>
+              <figcaption class="x-meta"><span class="x-stars" role="img" aria-label="5 de 5 estrelas">★★★★★</span><strong>Avaliação no Google</strong><span>janeiro de 2026</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 CONTATO -->
+      <section class="x-sec x-light" id="contato" aria-labelledby="x-con-t">
+        <div class="x-wrap">
+          <div class="x-reveal" style="margin-bottom: clamp(32px, 5vw, 56px)">
+            <span class="x-num" aria-hidden="true">06</span>
+            <p class="x-kicker">Contato e localização</p>
+            <h2 class="x-h2" id="x-con-t">Vem <span class="x-skew x-pink">treinar</span>.</h2>
+          </div>
+          <div class="x-contact">
+            <div class="x-info x-reveal">
+              <dl>
+                <dt>Endereço</dt>
+                <dd>Av. Gov. Dante Martins de Oliveira, 1193 - Novo Horizonte, Cuiabá - MT, 78058-688</dd>
+                <dt>Telefone / WhatsApp</dt>
+                <dd><a href="tel:+5565999013023">(65) 99901-3023</a></dd>
+                <dt>Instagram</dt>
+                <dd><a href="https://www.instagram.com/academiateamjosyfalcao/" target="_blank" rel="noopener noreferrer">@academiateamjosyfalcao</a></dd>
+                <dt>Horários</dt>
+                <dd>
+                  <table class="x-hours" aria-label="Horário de funcionamento">
+                    <tbody>
+                      <tr data-days="1,2,3,4,5"><th scope="row">Segunda a sexta</th><td>5h às 22h</td></tr>
+                      <tr data-days="6"><th scope="row">Sábado</th><td>8h às 11h e 16h às 19h</td></tr>
+                      <tr data-days="0"><th scope="row">Domingo</th><td>Fechado</td></tr>
+                    </tbody>
+                  </table>
+                </dd>
+              </dl>
+              <a class="x-btn x-btn--wa x-btn--big" data-wa href="https://wa.me/5565999013023?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os/produtos.%20Podem%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp (abre em nova aba)"><svg aria-hidden="true"><use href="#x-wa-glyph" /></svg>Chamar no WhatsApp</a>
+
+              <form class="x-form" id="x-form" novalidate>
+                <h3>Mande sua mensagem</h3>
+                <p>Preencha e a conversa abre direto no WhatsApp.</p>
+                <div class="x-field">
+                  <label for="f-nome">Nome</label>
+                  <input id="f-nome" name="nome" type="text" autocomplete="name" required aria-describedby="e-nome" />
+                  <p class="x-err" id="e-nome" aria-live="polite"></p>
+                </div>
+                <div class="x-field">
+                  <label for="f-tel">Telefone</label>
+                  <input id="f-tel" name="telefone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="(65) 90000-0000" aria-describedby="e-tel" />
+                  <p class="x-err" id="e-tel" aria-live="polite"></p>
+                </div>
+                <div class="x-field">
+                  <label for="f-msg">Mensagem</label>
+                  <textarea id="f-msg" name="mensagem" required aria-describedby="e-msg"></textarea>
+                  <p class="x-err" id="e-msg" aria-live="polite"></p>
+                </div>
+                <button class="x-btn x-btn--wa x-btn--big" type="submit"><svg aria-hidden="true"><use href="#x-wa-glyph" /></svg>Enviar pelo WhatsApp</button>
+              </form>
+            </div>
+            <div class="x-reveal">
+              <figure class="x-map">
+                <iframe src="https://www.google.com/maps?q=-15.5728061,-56.0318405&amp;z=17&amp;output=embed" title="Mapa da Academia Team Josy Falcão" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="340"></iframe>
+              </figure>
+              <p style="margin-top: 18px"><a class="x-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=-15.5728061,-56.0318405" target="_blank" rel="noopener noreferrer" aria-label="Como chegar pelo Google Maps (abre em nova aba)">Como chegar →</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="x-foot">
+      <div class="x-wrap">
+        <div class="x-foot__grid">
+          <div>
+            <div class="x-foot__logo"><img src="logo-team-josy-falcao.webp" alt="Logo Team Josy Falcão – Academia • Funcional" width="1254" height="720" loading="lazy" /></div>
+            <p style="margin: 14px 0 18px; font-family: var(--x-head); text-transform: uppercase; font-size: 1.3rem">Disciplina <span class="x-skew x-pink">supera</span> motivação.</p>
+            <a class="x-btn x-btn--wa" data-wa href="https://wa.me/5565999013023?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os/produtos.%20Podem%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp (abre em nova aba)"><svg aria-hidden="true"><use href="#x-wa-glyph" /></svg>WhatsApp</a>
+          </div>
+          <nav aria-label="Links rápidos">
+            <h2>Navegue</h2>
+            <ul>
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#modalidades">Modalidades</a></li>
+              <li><a href="#galeria">Galeria</a></li>
+              <li><a href="#avaliacoes">Avaliações</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h2>Endereço</h2>
+            <address>
+              Av. Gov. Dante Martins de Oliveira, 1193<br />Novo Horizonte, Cuiabá - MT<br />78058-688<br /><br />
+              <a href="tel:+5565999013023">(65) 99901-3023</a>
+            </address>
+          </div>
+          <div>
+            <h2>Siga</h2>
+            <a class="x-ig" href="https://www.instagram.com/academiateamjosyfalcao/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @academiateamjosyfalcao (abre em nova aba)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              @academiateamjosyfalcao
+            </a>
+          </div>
+        </div>
+        <p class="x-foot__bar">© <span id="x-year">2026</span> Academia Team Josy Falcão. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <a class="x-fab" data-wa href="https://wa.me/5565999013023?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os/produtos.%20Podem%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp"><svg aria-hidden="true"><use href="#x-wa-glyph" /></svg></a>
+
+    <div class="x-lb" id="x-lb" role="dialog" aria-modal="true" aria-label="Foto ampliada" aria-hidden="true">
+      <button class="x-lb__close" type="button" aria-label="Fechar">✕</button>
+      <button class="x-lb__prev" type="button" aria-label="Foto anterior">←</button>
+      <figure>
+        <img id="x-lb-img" src="musculacao-salao.webp" alt="Salão de musculação" width="1280" height="720" loading="lazy" />
+        <figcaption id="x-lb-cap"></figcaption>
+      </figure>
+      <button class="x-lb__next" type="button" aria-label="Próxima foto">→</button>
+    </div>
+
+    <script src="hark.js"></script>
+    <script>
+      /* ===== WhatsApp: altere aqui ===== */
+      const WHATSAPP_NUMBER = "5565999013023"; // (65) 99901-3023
+      const WHATSAPP_DEFAULT_MSG = "Olá! Vi o site de vocês e gostaria de mais informações sobre os serviços/produtos. Podem me ajudar?";
+
+      function waLink(msg) {
+        return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg || WHATSAPP_DEFAULT_MSG)}`;
+      }
+
+      (function () {
+        var doc = document;
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        doc.documentElement.classList.add("x-js");
+
+        // WhatsApp links
+        doc.querySelectorAll("[data-wa]").forEach(function (a) {
+          a.href = waLink(a.getAttribute("data-wa-msg"));
+        });
+
+        // Year
+        var y = doc.getElementById("x-year");
+        if (y) y.textContent = new Date().getFullYear();
+
+        // Today's hours
+        var today = String(new Date().getDay());
+        doc.querySelectorAll(".x-hours tr[data-days]").forEach(function (tr) {
+          if (tr.getAttribute("data-days").split(",").indexOf(today) > -1) {
+            tr.classList.add("is-today");
+            tr.setAttribute("aria-current", "date");
+          }
+        });
+
+        // Mobile menu
+        var burger = doc.querySelector(".x-burger");
+        var menu = doc.getElementById("x-menu");
+        function setMenu(open) {
+          burger.setAttribute("aria-expanded", open ? "true" : "false");
+          burger.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+          menu.classList.toggle("is-open", open);
+        }
+        burger.addEventListener("click", function () {
+          var open = burger.getAttribute("aria-expanded") !== "true";
+          setMenu(open);
+          if (open) { var f = menu.querySelector("a"); if (f) f.focus(); }
+        });
+        menu.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", function () { setMenu(false); });
+        });
+        doc.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && burger.getAttribute("aria-expanded") === "true") { setMenu(false); burger.focus(); }
+        });
+
+        // Counters
+        function runCount(el) {
+          var end = parseFloat(el.getAttribute("data-count"));
+          var dec = parseInt(el.getAttribute("data-decimals") || "0", 10);
+          var fmt = function (v) { return v.toLocaleString("pt-BR", { minimumFractionDigits: dec, maximumFractionDigits: dec }); };
+          if (reduce) { el.textContent = fmt(end); return; }
+          var start = null, dur = 1400;
+          function step(t) {
+            if (!start) start = t;
+            var p = Math.min((t - start) / dur, 1);
+            var e = 1 - Math.pow(1 - p, 3);
+            el.textContent = fmt(end * e);
+            if (p < 1) requestAnimationFrame(step);
+          }
+          el.textContent = fmt(0);
+          requestAnimationFrame(step);
+        }
+
+        // Reveal + counters on scroll
+        var reveals = doc.querySelectorAll(".x-reveal");
+        var counters = doc.querySelectorAll("[data-count]");
+        if ("IntersectionObserver" in window && !reduce) {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+              if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
+            });
+          }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+          reveals.forEach(function (el) { io.observe(el); });
+          var co = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+              if (en.isIntersecting) { runCount(en.target); co.unobserve(en.target); }
+            });
+          }, { threshold: 0.6 });
+          counters.forEach(function (el) { co.observe(el); });
+        } else {
+          reveals.forEach(function (el) { el.classList.add("is-in"); });
+        }
+
+        // Lightbox
+        var lb = doc.getElementById("x-lb");
+        var lbImg = doc.getElementById("x-lb-img");
+        var lbCap = doc.getElementById("x-lb-cap");
+        var tiles = [].slice.call(doc.querySelectorAll(".x-gal figure.x-tile"));
+        var idx = 0, lastFocus = null;
+        function show(i) {
+          idx = (i + tiles.length) % tiles.length;
+          var img = tiles[idx].querySelector("img");
+          lbImg.src = img.currentSrc || img.src;
+          lbImg.alt = img.alt;
+          lbCap.textContent = tiles[idx].querySelector("figcaption").textContent;
+        }
+        function open(i) {
+          lastFocus = doc.activeElement;
+          show(i);
+          lb.classList.add("is-open");
+          lb.setAttribute("aria-hidden", "false");
+          doc.body.style.overflow = "hidden";
+          lb.querySelector(".x-lb__close").focus();
+        }
+        function close() {
+          lb.classList.remove("is-open");
+          lb.setAttribute("aria-hidden", "true");
+          doc.body.style.overflow = "";
+          if (lastFocus) lastFocus.focus();
+        }
+        tiles.forEach(function (t, i) {
+          t.querySelector("button").addEventListener("click", function () { open(i); });
+        });
+        lb.querySelector(".x-lb__close").addEventListener("click", close);
+        lb.querySelector(".x-lb__prev").addEventListener("click", function () { show(idx - 1); });
+        lb.querySelector(".x-lb__next").addEventListener("click", function () { show(idx + 1); });
+        lb.addEventListener("click", function (e) { if (e.target === lb) close(); });
+        lb.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") { e.preventDefault(); close(); }
+          else if (e.key === "ArrowLeft") show(idx - 1);
+          else if (e.key === "ArrowRight") show(idx + 1);
+          else if (e.key === "Tab") {
+            var f = [].slice.call(lb.querySelectorAll("button"));
+            var first = f[0], last = f[f.length - 1];
+            if (e.shiftKey && doc.activeElement === first) { e.preventDefault(); last.focus(); }
+            else if (!e.shiftKey && doc.activeElement === last) { e.preventDefault(); first.focus(); }
+          }
+        });
+
+        // Contact form -> WhatsApp
+        var form = doc.getElementById("x-form");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var nome = form.nome, tel = form.telefone, msg = form.mensagem;
+          var checks = [
+            [nome, "e-nome", nome.value.trim().length >= 2 ? "" : "Informe seu nome."],
+            [tel, "e-tel", tel.value.replace(/\D/g, "").length >= 10 ? "" : "Informe um telefone com DDD."],
+            [msg, "e-msg", msg.value.trim().length >= 3 ? "" : "Escreva sua mensagem."]
+          ];
+          var firstBad = null;
+          checks.forEach(function (c) {
+            doc.getElementById(c[1]).textContent = c[2];
+            c[0].setAttribute("aria-invalid", c[2] ? "true" : "false");
+            if (c[2] && !firstBad) firstBad = c[0];
+          });
+          if (firstBad) { firstBad.focus(); return; }
+          var text = WHATSAPP_DEFAULT_MSG + "\n\nNome: " + nome.value.trim() + "\nTelefone: " + tel.value.trim() + "\nMensagem: " + msg.value.trim();
+          window.open(waLink(text), "_blank", "noopener,noreferrer");
+        });
+      })();
+    </script>
+  </body>
+</html>
